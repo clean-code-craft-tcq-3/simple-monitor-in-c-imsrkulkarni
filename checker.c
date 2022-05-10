@@ -33,7 +33,11 @@ int checkSoc(float soc)
   }
 }
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  if(checkChargeRate(chargeRate) && checkTemperature(temperature) && checkSoc(soc)){
+   int batteryStatus=1;
+   batteryStatus &= checkChargeRate(chargeRate);
+   batteryStatus &= checkTemperature(temperature);
+   batteryStatus &= checkSoc(soc);
+  if(batteryStatus){
       return 1;
   }
   else{
