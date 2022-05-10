@@ -12,7 +12,7 @@ int checkChargeRate(float chargeRate)
     return 1;
   }
 }
-int checkTemperature(float temaperature)
+int checkTemperature(float temperature)
 {
   if(temperature < 0 || temperature > 45) {
     printf("Temperature out of range!\n");
